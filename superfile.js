@@ -9,14 +9,14 @@ var initSelf = {
     "var test = true; if (test) { var y = 1; }",
     "var test = -1; if (test) { var y = 1; }"
     ],
-  objective : 
-    y === 1; /* don't you love JS? :P */
   testClones : 
   function(arrayTask) {
     for (clone in arrayTask) {
       eval(clone);
-      if (initSelf.objective) {
-        "hooray!"
+      if (typeof y !== "undefined") {
+        if (y === 1) {
+          "hooray!"
+        }
       }
     }
   }
